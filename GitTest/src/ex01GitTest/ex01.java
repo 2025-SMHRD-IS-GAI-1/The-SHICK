@@ -11,10 +11,11 @@ public class ex01 {
 		System.out.println("제발");
 		
 		System.out.println("개어렵농");
-		
 		System.out.println("^_^");
 		System.out.println("^^");
-	
+		System.out.println("^^^");
+		
+		
 	}
  
 }
