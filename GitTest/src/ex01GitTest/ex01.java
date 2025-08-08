@@ -7,7 +7,7 @@ public class ex01 {
 		
 		System.out.println("저는 팀원입니다!");
 
-
+		System.out.println("다행이다...");
 	}
  
 }
