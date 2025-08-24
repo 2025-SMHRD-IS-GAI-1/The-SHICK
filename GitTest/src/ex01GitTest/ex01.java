@@ -1,22 +1,40 @@
 package ex01GitTest;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
 public class ex01 {
 
 	public static void main(String[] args) {
-		System.out.println("난 팀장이죠...");
+		Connection conn = null;
+		PreparedStatement pstm = null;
 		
-		System.out.println("저는 팀원입니다!");
-
-		System.out.println("다행이다...");
-		System.out.println("제발");
-		
-		System.out.println("개어렵농");
-		System.out.println("^_^");
-		System.out.println("^^");
-		System.out.println("^^^");
-		
-		System.out.println("8월25일");
-		System.out.println("8월25일");
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@project-db-cgi.smhrd.com:1524:xe";
+			String user = "CGI_25IS_GA_P1_1";
+			String password = "smhrd1";
+			
+			conn = DriverManager.getConnection(url, user, password);
+			
+			String sql = "INSERT INTO MEMBER VALUES('1234', '1234', '1234', '1234')";
+			pstm = conn.prepareStatement(sql);
+			pstm.executeUpdate();
+			
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			try {
+				if(pstm!=null)pstm.close();
+				if(conn!=null)conn.close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
 	}
  
 }
