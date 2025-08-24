@@ -15,7 +15,7 @@ public class ex01 {
 		System.out.println("^^");
 		System.out.println("^^^");
 		
-		
+		System.out.println("8월25일");
 	}
  
 }
