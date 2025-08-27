@@ -178,4 +178,4 @@ SQL 입력 구문 초기 값 설정 후 원하는 값 입력 하기
 </details>
 
 ## 6. 회고 / 느낀점
->프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
+>프로젝트 개발 회고 글: [https://zuminternet.github.io/ZUM-Pilot-integer/](https://www.notion.so/sdtunit032526/6-KPT-256ae0eec95581508165e0336c549769)
