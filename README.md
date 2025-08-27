@@ -12,7 +12,7 @@
 ### Programming Language
   - Java 11
 ### Database
-  - orcle
+  - Oracle
 
 </br>
 
