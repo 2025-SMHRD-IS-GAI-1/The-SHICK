@@ -125,6 +125,54 @@ VARCHAR2(500) →VARCHAR2(1000) → VARCHAR2(2000) → VARCHAR2(4000)으로 변�
 </div>
 </details>
 
+### 5.4. DB 연결오류
+
+- 클래스 명	JAVA - UserDAO
+- 이슈 사항	loginVo 초기화 안 됨
+- 원인	loginVo가 null로만 선언되어 있고, 성공했을 때도 값이 안 들어감
+
+<details>
+<summary><b>해결 단계</b></summary>
+시도1. 시도한 내용
+if (rs.next()) { 
+            loginVo = new Gamer();
+            loginVo.setId(rs.getString("ID"));
+            loginVo.setPw(rs.getString("PASSWORD"));
+            loginVo.setNickname(rs.getString("NICKNAME")); 
+        }
+
+</div>
+</details>
+
+<details>
+<summary><b>해결 방법</b></summary>
+조회 결과가 있으면 User 객체 생성 후 값 세팅 후 필요한 컬럼 추가
+
+</div>
+</details>
+
+### 5.5. JAVA ORACLE 연결
+
+- 클래스 명	JAVA - UserDAO
+- 이슈 사항	ORACLE 연결
+- 원인	SQL 입력 구문
+
+<details>
+<summary><b>해결 단계</b></summary>
+시도1. 시도한 내용
+초기 값 설정 없이 원하는 값만 입력
+→ 초기 값 설정하기
+String sql = "INSERT INTO GAMER (ID, PASSWORD, NICKNAME) VALUES (?, ?, ?)";
+
+</div>
+</details>
+
+<details>
+<summary><b>해결 방법</b></summary>
+SQL 입력 구문 초기 값 설정 후 원하는 값 입력 하기
+
+</div>
+</details>
 ## 6. 그 외 트러블 슈팅
 <details>
 <summary>npm run dev 실행 오류</summary>
