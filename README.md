@@ -60,15 +60,34 @@
 - 원인: 초기 설정한 VARCHAR2 컬럼의 데이터 길이가 예상보다 큼
 
 <details>
+<summary><b>해결 단계</b></summary>
+시도1. 시도한 내용
+초기 값 설정 없이 원하는 값만 입력
+→ 초기 값 설정하기
+String sql = "INSERT INTO GAMER (ID, PASSWORD, NICKNAME) VALUES (?, ?, ?)";
+
+</div>
+</details>
+<details>
 <summary><b>해결 방법</b></summary>
 VARCHAR2(500) →VARCHAR2(1000) → VARCHAR2(2000) → VARCHAR2(4000)으로 변경
 
 </div>
 </details>
 
-### 5.2. 쿼리문으로 가져온 컬럼 값이 자료형이 Number인데도 null이라서 자바에서 비교연산이 불가
+### 5.2. 관리자 계정 초기 값 설정
 - 클래스 명: oracle - GAMER
 - 원인: 데이터 타입 = NUMBER , 관리자의 초기 값 = null
+- 이슈 사항 : 쿼리문으로 가져온 컬럼 값이 자료형이 Number인데도 null이라서 자바에서 비교연산이 불가
+
+<details>
+<summary><b>해결 단계</b></summary>
+- **시도1. 시도한 내용**
+    - null값인 경우 관리자로 분류하도록 작성
+    - getInt 메서드와 null이 비교 연산이 불가
+
+</div>
+</details>
 
 <details>
 <summary><b>해결 방법</b></summary>
@@ -77,11 +96,27 @@ VARCHAR2(500) →VARCHAR2(1000) → VARCHAR2(2000) → VARCHAR2(4000)으로 변�
 </div>
 </details>
 
-### 5.3.
+### 5.3. 입력 문제
 
+- 클래스 명	JAVA , ORACLE
+- 이슈 사항	텍스트 데이터를 처리하는 과정에서 문법이 다름으로 인해 문제가 발생
+- 원인	문자열처리: 쿼리문 - 홑따옴표, 자바 - 겹따옴표 사용으로 어느쪽을 선택하더라도 다른 한쪽에서 문제가 발생
 
+<details>
+<summary><b>해결 단계</b></summary>
+- **시도1. 시도한 내용**
+    - 텍스트 자바 입력 문제 -> 홑따옴표
+    - 텍스트 오라클 입력 문제 -> 따옴표 삭제
 
+</div>
+</details>
 
+<details>
+<summary><b>해결 방법</b></summary>
+쿼리 입력문 내 따옴표를 모두 삭제하여 문제 해결
+
+</div>
+</details>
 
 ## 6. 그 외 트러블 슈팅
 <details>
