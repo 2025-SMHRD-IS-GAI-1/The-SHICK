@@ -36,7 +36,8 @@
 - 총 합산 포인트에 따라 다른 엔딩 출력
 
 ### 2) 플로우 차트
-( 이미지 )
+<img width="655" height="723" alt="image" src="https://github.com/user-attachments/assets/6fa17164-122a-43a1-a739-13176434efb2" />
+
 
 ### 3) 피드백 채택 의견 
 " 호감도에 따른 대화 등 텍스트양이 걱정됩니다. "
