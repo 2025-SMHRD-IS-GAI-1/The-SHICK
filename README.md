@@ -1,5 +1,4 @@
 # 나는야 플러팅 마스터❤
-![image.png](attachment:b3fbce56-8794-4083-9dc1-9a0e55dd1695:image.png)
 </br>
 </br>
 
