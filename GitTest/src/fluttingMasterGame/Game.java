@@ -80,7 +80,7 @@ public class Game {
 				stemp = stemp.replace("(플레이어나이)", age);
 				stemp = stemp.replace("(그녀)", hername);
 				printScript(stemp, textspeed);
-				
+				System.out.println();
 				ArrayList<SelectorVO> list = searchSVO(nextnum);
 				int i = 0;
 				//System.out.println(list.size());
