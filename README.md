@@ -1,4 +1,6 @@
 # 나는야 플러팅 마스터❤
+<img width="230" height="199" alt="image" src="https://github.com/user-attachments/assets/07b0cd28-c36d-4028-93b9-b034c9aa7382" />
+
 </br>
 </br>
 
